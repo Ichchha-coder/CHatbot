@@ -21,7 +21,7 @@ This project is a document-based chatbot that helps you find information. It use
    ```
 
 # Usage Instruction
-Interact with chatbot once the containerization is done.
+Interact with document once the containerization is done.
 
 # Modules
 main.py: Start flow of application.
