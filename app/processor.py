@@ -1,6 +1,8 @@
-from llama_index.core import SimpleDirectoryReader
+#Document loading 
+
+from llama_index import SimpleDirectoryReader
 from config import DATA_DIR
 
-
 def load_documents_from_directory():
-    return SimpleDirectoryReader(DATA_DIR).load_data()
+    reader = SimpleDirectoryReader(DATA_DIR)
+    return reader.load_data()

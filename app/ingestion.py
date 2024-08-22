@@ -1,8 +1,18 @@
-import os
+#Chunking the document
+from llama_index.core import SimpleDirectoryReader
+from config import DATA_DIR
 
-# QDRANT_HOST = os.getenv("QDRANT_HOST", "localhost")
-# QDRANT_PORT = int(os.getenv("QDRANT_PORT", 6333))
-COLLECTION_NAME = "my_documents"
-EMBEDDING_MODEL = "sentence-transformers/all-MiniLM-L6-v2"
-DATA_DIR = "./documents"
-os.environ["GOOGLE_API_KEY"] = "AIzaSyAld7eOoQK142jd_sWxvKfy7asIdk1MAYw"
+
+def load_documents_from_directory(chunk_size=500):
+    reader = SimpleDirectoryReader(DATA_DIR)
+    documents = reader.load_data()
+    
+    # Chunk the documents
+    chunked_documents = []
+    for document in documents:
+        text = document['text']
+        chunks = [text[i:i+chunk_size] for i in range(0, len(text), chunk_size)]
+        for chunk in chunks:
+            chunked_documents.append({'text': chunk})
+    
+    return chunked_documents

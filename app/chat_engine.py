@@ -1,12 +1,14 @@
+#Set up the chatbot's conversational engine.: 
+
 from llama_index.core.memory import ChatMemoryBuffer
 from llama_index.core.chat_engine import CondensePlusContextChatEngine
 from llama_index.core import PromptTemplate
 
 def create_chat_engine(index, llm):
-    memory = ChatMemoryBuffer.from_defaults(token_limit=4500)
+    memory = ChatMemoryBuffer.from_defaults(token_limit=4000)
     
     template = (
-        "We have provided context information below. \n"
+        "Context information is provided below. \n"
         "---------------------\n"
         "{context_str}"
         "\n---------------------\n"

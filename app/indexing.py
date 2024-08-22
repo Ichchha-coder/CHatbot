@@ -1,3 +1,5 @@
+#Creates the vector index from documents.
+
 from llama_index.core import VectorStoreIndex, ServiceContext
 from llama_index.vector_stores.qdrant import QdrantVectorStore
 from llama_index.embeddings.huggingface import HuggingFaceEmbedding
