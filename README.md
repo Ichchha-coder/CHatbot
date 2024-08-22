@@ -39,4 +39,5 @@ Qdrant in this case, follow the same for other database
 Replace the embedding model in "config.py" and make necessary installations in case of necessity and update in requirements.txt.
 
 # PS:
-There are virtual environment file in folder venv. Incase of use of dockerization ,ignore it.
+There are virtual environment file in folder venv. Incase of use of dockerization ,ignore it. If you don't use docker then you have to install the dependencies using pip install -r requirements.txt
+
