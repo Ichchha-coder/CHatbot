@@ -25,10 +25,15 @@ Interact with document once the containerization is done.
 
 # Modules
 main.py: Start flow of application.
+
 config.py: Centralizes configuration settings.
+
 processor.py: Handles loading and optional chunking of documents from the specified directory.
+
 indexing.py: Creates a vector-based index of documents using embeddings and a vector store.
+
 chat_engine.py: Sets up the chatbot engine with memory and retrieval capabilities for generating responses.
+
 ingestion.py: Manages the ingestion of documents from various sources for further processing.
 
 # Vector Database SetUp
