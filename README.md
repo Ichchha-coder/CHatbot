@@ -36,7 +36,7 @@ Manage the vector database client and vector_store in indexing.py
 Qdrant in this case, follow the same for other database
 
 # Embedding Model Replacement 
-Replace the embedding model in "config.py" and make necessary installations in case of necessity and update in requiremnts.txt.
+Replace the embedding model in "config.py" and make necessary installations in case of necessity and update in requirements.txt.
 
 # PS:
 There are virtual environment file in folder venv. Incase of use of dockerization ,ignore it.
